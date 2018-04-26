@@ -51,6 +51,7 @@ def winner?(board)
       "X"
     else
       "O"
+    end
   else
     nil
   end
