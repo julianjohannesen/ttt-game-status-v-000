@@ -8,7 +8,7 @@ WIN_COMBINATIONS = [
   # 0 | 1 | 2
   # 3 | 4 | 5
   # 6 | 7 | 8
-  
+
   [0,1,2], # Top row
   [3,4,5],  # Middle row
   [6,7,8],  # Bottom row
@@ -21,11 +21,15 @@ WIN_COMBINATIONS = [
 
 
 def won?(board)
-  WIN_COMBINATIONS.find{
+  a = WIN_COMBINATIONS.find{
     |combo|
     board[combo[0]] == "X" && board[combo[1]] == "X" && board[combo[2]] == "X"
   }
-  
+  b = WIN_COMBINATIONS.find{
+    |combo|
+    board[combo[0]] == "O" && board[combo[1]] == "O" && board[combo[2]] == "O"
+  }
+  return a || b
 end
 
 def draw?(board)
