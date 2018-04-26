@@ -44,9 +44,9 @@ def over?(board)
   return won?(board) || draw?(board)
 end
 
-def winner?(board)
+def winner(board)
   a = won?(board)
-  if a
+  if a.class == Array
     if board[a[0]] == "X"
       "X"
     else
