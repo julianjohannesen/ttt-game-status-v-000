@@ -46,7 +46,7 @@ end
 
 def winner(board)
   a = won?(board)
-  if a.class == Array
+  if a
     if board[a[0]] == "X"
       "X"
     else
