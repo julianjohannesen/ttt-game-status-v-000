@@ -5,6 +5,10 @@ end
 
 # Define your WIN_COMBINATIONS constant
 WIN_COMBINATIONS = [
+  # 0 | 1 | 2
+  # 3 | 4 | 5
+  # 6 | 7 | 8
+  
   [0,1,2], # Top row
   [3,4,5],  # Middle row
   [6,7,8],  # Bottom row
@@ -16,11 +20,12 @@ WIN_COMBINATIONS = [
 ]
 
 
-def won?(board, marker = "X")
+def won?(board)
   WIN_COMBINATIONS.find{
     |combo|
-    board[combo[0]] == marker && board[combo[1]] == marker && board[combo[2]] == marker
+    board[combo[0]] == "X" && board[combo[1]] == "X" && board[combo[2]] == "X"
   }
+  
 end
 
 def draw?(board)
